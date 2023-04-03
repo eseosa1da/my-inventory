@@ -25,4 +25,6 @@ jobs:
           go fmt ./...
           go vet ./...
       - name: Run tests
-        run: go test
+        run: |
+          go mod tidy
+          go test
