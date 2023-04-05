@@ -10,7 +10,7 @@ func getEnvOrDefault(env, defaultVal string) string {
 	return defaultVal
 }
 
-var DBName = getEnvOrDefault("DB_NAME", "inventory")
-var DbUser = getEnvOrDefault("DB_USER", "admin")
+var DBName = getEnvOrDefault("DB_NAME", "test")
+var DbUser = getEnvOrDefault("DB_USER", "root")
 var DbPassword = getEnvOrDefault("DB_PASSWORD", "Password12")
-var DBHost = getEnvOrDefault("DB_HOST", "goproject.cwqtgpeadrce.us-east-1.rds.amazonaws.com:3306")
+var DBHost = getEnvOrDefault("DB_HOST", "localhost")
