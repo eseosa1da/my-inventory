@@ -15,13 +15,13 @@ jobs:
           sudo mysql -e 'ALTER USER "${{env.DB_USER}}"@"localhost" IDENTIFIED BY "${{env.DB_PASSWORD}}";' -uroot -proot
           sudo mysql -e 'CREATE DATABASE ${{env.DB_NAME}};' -u${{env.DB_USER}} -p${{env.DB_PASSWORD}}
       - name: Checkout Repo Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set Up Go
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v4
         with:
           go-version: 1.20
-      - name: Install dependencies
-        run: go get .
+      # - name: Install dependencies
+      #   run: go get .
       - name: Run linting
         run:  |
           go fmt ./...
