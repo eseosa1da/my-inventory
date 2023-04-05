@@ -42,8 +42,8 @@ func createTable() {
 }
 
 func clearTable() {
-	a.DB.Exec("DELETE from products")
-	a.DB.Exec("ALTER TABLE products AUTO_INCREMENT=1")
+	a.DB.Exec("DELETE from products;")
+	a.DB.Exec("ALTER TABLE products AUTO_INCREMENT=1;")
 }
 
 func addProduct(name string, quantity int, price float64) {
