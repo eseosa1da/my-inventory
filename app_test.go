@@ -14,7 +14,7 @@ var a App
 
 func TestMain(m *testing.M) {
 
-	if err := a.Initialize(DbUser, DbPassword, DBHost, DBName); err != nil {
+	if err := a.Initialize(DBUser, DBPassword, DBHost, DBName); err != nil {
 		log.Fatal("Error Occured while initialising the database")
 	}
 
