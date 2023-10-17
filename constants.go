@@ -2,12 +2,12 @@ package main
 
 import "os"
 
-func getEnvOrDefault(env, defaultVal string) string {
+func getEnvOrDefault(env, defaultValue string) string {
 	if val := os.Getenv(env); val != "" {
 		return val
 	}
 
-	return defaultVal
+	return defaultValue
 }
 
 var DBName = getEnvOrDefault("DB_NAME", "inventory")
